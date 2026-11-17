@@ -117,11 +117,22 @@ footer{background:var(--ink-2);color:rgba(255,255,255,.6);padding-block:3rem;fon
 .foot-note{font-size:.76rem}
 
 @media(max-width:980px){.gallery{grid-template-columns:repeat(3,1fr)}}
-@media(max-width:1024px){
+/* Nav compatta per larghezze medie: tutto resta orizzontale e centrato */
+@media(max-width:1180px){
+  .nav{gap:.8rem}
+  .brand img{height:40px}
+  .nav-links{gap:.62rem}
+  .nav-links a{font-size:.63rem;letter-spacing:.05em;white-space:nowrap}
+  .nav-cta{gap:.7rem}
+  .nav-cta .phone{display:none}
+  .nav-desk-cta{padding:.62rem .9rem;font-size:.66rem}
+}
+/* Sotto i ~900px (tablet piccoli e telefoni) il menu diventa a tendina (hamburger) */
+@media(max-width:900px){
   .nav-links,.nav-cta .phone,.nav-desk-cta{display:none}
   .menu-btn{display:flex}
   .nav-links.open{display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:var(--paper);border-bottom:1px solid var(--line);padding:.4rem var(--gutter) 1.3rem;box-shadow:0 20px 34px -22px rgba(0,0,0,.4)}
-  .nav-links.open a{padding:1.05rem 0;border-bottom:1px solid var(--line-soft);font-size:.98rem;letter-spacing:.14em}
+  .nav-links.open a{padding:1.05rem 0;border-bottom:1px solid var(--line-soft);font-size:.98rem;letter-spacing:.14em;white-space:normal}
   .nav-links.open .nav-only-mobile{display:flex}
   .nav-links.open .mob-phone{color:var(--ink);font-weight:600;letter-spacing:.02em;text-transform:none;font-size:1.05rem}
   .nav-links.open .btn{justify-content:center;border-bottom:0;margin-top:1rem;font-size:.82rem;color:var(--ink)}
