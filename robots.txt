@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://antufano12-ctrl.github.io/sito-petrucci/sitemap.xml
